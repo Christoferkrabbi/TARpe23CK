@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace WorkoutApplication.Model
@@ -16,7 +17,7 @@ namespace WorkoutApplication.Model
         public int RecommendedDurationInSecondsAfterExercise {get; init;}
         public string? RestTimeInstructions {get; init;}
 
-        [JsonConverter(Typeof(JsonStringEnumConverter))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public enum ExerciseIntensity {
             Low = 1,
             Normal = 2,

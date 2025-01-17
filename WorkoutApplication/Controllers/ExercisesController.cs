@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WorkoutApplication.Model;
 
 namespace WorkoutApplication.Controllers
 {  
@@ -11,7 +13,7 @@ namespace WorkoutApplication.Controllers
     {
         private readonly DataContext _context;
         
-        public ExercisesController(DataContext _context)
+        public ExercisesController(DataContext context)
         {
             _context = context;
         }
